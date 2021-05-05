@@ -1,0 +1,11 @@
+@mixin font($font-size, $line-height, $font-weight: 400) {
+    font-size: $font-size;
+    line-height: $line-height;
+    font-weight: $font-weight;
+}
+
+@mixin mobile {
+    @media (max-width: 375px) {
+        @content;
+    }
+}

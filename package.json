@@ -1,0 +1,33 @@
+{
+  "name": "dot-dot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LevSavin/dot-dot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LevSavin/dot-dot/issues"
+  },
+  "homepage": "https://github.com/LevSavin/dot-dot#readme",
+  "dependencies": {
+    "css-loader": "^5.2.4",
+    "mini-css-extract-plugin": "^1.5.1",
+    "node-sass": "^5.0.0",
+    "sass": "^1.32.12",
+    "sass-loader": "^11.0.1",
+    "webpack": "^5.36.1",
+    "webpack-cli": "^4.6.0"
+  },
+  "devDependencies": {
+    "file-loader": "^6.2.0"
+  }
+}

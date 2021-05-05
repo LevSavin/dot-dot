@@ -1,0 +1,155 @@
+@font-face {
+  font-family: 'Helvetica Neue medium';
+  src: url('./fonts/helveticaneuecyr-medium-webfont.woff2') format('woff2'),
+    url('./fonts/helveticaneuecyr-medium-webfont.woff') format('woff'),
+    url('./fonts/helveticaneuecyr-medium-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('./fonts/helveticaneuecyr-roman-webfont.woff2') format('woff2'),
+    url('./fonts/helveticaneuecyr-roman-webfont.woff') format('woff'),
+    url('./fonts/helveticaneuecyr-roman-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue bold';
+  src: url('./fonts/helveticaneuecyr-bold-webfont.woff2') format('woff2'),
+    url('./fonts/helveticaneuecyr-bold-webfont.woff') format('woff'),
+    url('./fonts/helveticaneuecyr-bold-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0, 0, 0, 0)
+}
+
+input,
+select,
+option,
+button,
+span {
+  font-family: "Helvetica Neue", "Arial", sans-serif;
+  border: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: "Helvetica Neue", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 15px;
+  font-weight: 400;
+  font-style: normal;
+  color: $white-color;
+}
+
+.main {
+  max-width: $desktop-width;
+  margin: 0 auto;
+  position: relative;
+  background-color: $dark-gray-color;
+}
+
+.container {
+  max-width: (($desktop-width)-170px-170px)/($desktop-width)*100vw;
+  margin: 0 auto;
+
+  @include mobile {
+    max-width: (($mobile-width)-16px-16px)/($mobile-width)*100vw;
+  }
+}
+
+.select {
+  display: block;
+  width: 100%;
+  position: relative;
+}
+
+.new-select {
+  align-items: center;
+  -webkit-box-align: center;
+	-webkit-align-items: center;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  position: relative;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  height: 44px;
+  margin: 8px 0 16px 0;
+  padding: 0 0 0 12px;
+  @include font(15px, 18px, 400);
+  background-color: $white-color;
+  color: $black-color;
+  overflow: hidden;
+  line-height: 3em;  
+}
+
+.new-select__list {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  z-index: 2;
+  background: $white-color;
+  user-select: none;
+  @include font(14px, 17px, 400);
+}
+
+.new-select__list.on {
+  display: block;
+}
+
+.new-select__item span {
+  display: block;
+  padding: 10px 15px;
+  color: $black-color;
+}
+
+.new-select__item span:hover {
+  color: $white-color;
+  background: $red-color;
+}
+
+.new-select:after {
+  display: block;
+  content: '‹';
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  right: 17px;
+  top: 22px;
+  @include font(30px, 1px, 400);
+  color: $black-color;
+  opacity: 0.9;
+
+  -webkit-transition: all .27s ease-in-out;
+  -o-transition: all .27s ease-in-out;
+  transition: all .27s ease-in-out;
+
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+
+.new-select.on:after {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}

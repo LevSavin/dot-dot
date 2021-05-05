@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet' href='style.css'>
+</head>
+
+<body>
+    <main class="main">
+        <section class="delivery container">
+            <div class="delivery__wrap">
+                <form action="#" class="delivery__form">
+                    <h1 class="delivery-name">FTL: Прямая машина</h1>
+                    <ol class="delivery__form-list" id="deliveryOptions">
+                        <li class="delivery__form-item">
+                            <fieldset>
+                                <legend class="delivery__form-tittle">Маршрут</legend>
+                                <label class="delivery__form-subtittle" for="where-from">Откуда</label>
+                                <input class="delivery__form-field" type="text" id="where-from">
+                                <label class="delivery__form-subtittle" for="where-to">Куда</label>
+                                <input class="delivery__form-field" type="text" id="where-to">
+                            </fieldset>
+                        </li>
+                        <li class="delivery__form-item">
+                            <fieldset class="delivery__form-wrapper transport">
+                                <legend class="delivery__form-tittle">Транспорт</legend>
+                                <div class="transport__wrap">
+                                    <div class="delivery__form-wrap">
+                                        <label class="delivery__form-subtittle" for="capacity">Грузоподъёмность</label>
+                                        <select class="list-option select" id="capacity">
+                                            <option hidden disabled selected value>Не выбрана</option>
+                                            <option value="cargo-1">Вариант 1</option>
+                                            <option value="cargo-2">Вариант 2</option>
+                                            <option value="cargo-3">Вариант 3</option>
+                                            <option value="cargo-4">Вариант 4</option>
+                                            <option value="cargo-5">Вариант 5</option>
+                                        </select>
+                                    </div>
+                                    <div class="delivery__form-wrap">
+                                        <label class="delivery__form-subtittle" for="loading">Способ погрузки</label>
+                                        <select class="list-option select" id="loading">
+                                            <option value="loading-1" selected>Задняя</option>
+                                            <option value="loading-2">Боковая</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </li>
+                        <li class="delivery__form-item">
+                            <fieldset class="delivery__form-wrapper cargo">
+                                <legend class="delivery__form-tittle">Груз</legend>
+                                <ul class="cargo__list">
+                                    <li class="cargo__item-type cargo__item">
+                                        <label class="delivery__form-subtittle" for="cargo-type">Тип груза</label>
+                                        <select class="cargo__type select" id="cargo-type" data-action="cargo-type">
+                                            <option hidden disabled selected value>Не выбран</option>
+                                            <option value="type-1">Вариант 1</option>
+                                            <option value="type-2">Вариант 2</option>
+                                            <option value="type-3">Вариант 3</option>
+                                            <option value="type-4">Вариант 4</option>
+                                            <option value="type-5">Вариант 5</option>
+                                        </select>
+                                    </li>
+                                    <li class="cargo__item-danger cargo__item">
+                                        <label class="delivery__form-subtittle" for="danger-class">Класс
+                                            опасности</label>
+                                        <select id="danger-class" class="cargo__danger-class list-option select">
+                                            <option value="option-1" selected>Класс 5 — Окисляющие вещества и
+                                                органические перекиси</option>
+                                            <option value="class-2">Вариант 2</option>
+                                            <option value="class-3">Вариант 3</option>
+                                            <option value="class-4">Вариант 4</option>
+                                            <option value="class-5">Вариант 5</option>
+                                        </select>
+                                    </li>
+                                    <li class="cargo__item-cost cargo__item">
+                                        <label class="delivery__form-subtittle" for="declared-value">Объявленная
+                                            ценность, ₽</label>
+                                        <input class="delivery__form-field" type="text" id="declared-value"
+                                            placeholder="&#8805;1">
+                                    </li>
+                                    <li class="cargo__item-temperature cargo__item">
+                                        <div class="cargo__item-wrap">
+                                            <input type="checkbox" id="temperature-regime" class="custom-checkbox">
+                                            <label for="temperature-regime" class="cargo__checkbox-text">Требуется
+                                                температурный режим</label>
+                                        </div>
+                                        <div class="cargo__item-wrapper temperature visually-hidden">
+                                            <div class="temperature__wrap">
+                                                <label class="temperature__text" for="temperature-from">От,
+                                                    °C</label>
+                                                <input class="temperature__field" type="text" id="temperature-from"
+                                                    placeholder="-20">
+                                            </div>
+                                            <div class="temperature__wrap">
+                                                <label class="temperature__text" for="temperature-to">До,
+                                                    °C</label>
+                                                <input class="temperature__field" type="text" id="temperature-to"
+                                                    placeholder="+23">
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </fieldset>
+                        </li>
+                        <li class="delivery__form-item">
+                            <fieldset class="destination">
+                                <legend class="delivery__form-tittle">Время</legend>
+                                <div>
+                                    <div class="destination__addres">
+                                        <span class="destination__addres-subtittle">Когда прибыть на точку</span>
+                                        <span class="destination__addres-subtittle">700 км в день</span>
+                                    </div>
+                                    <div class="destination__field">
+                                        <span class="destination__field-text circle-active">Адрес не указан</span>
+                                        <button class="destination__button button-active" type="button">
+                                            <span class="destination__button-text button-text-active">не выбрано</span>
+                                        </button>
+                                    </div>
+                                    <div class="destination__field">
+                                        <span class="destination__field-text circle-disactive">Адрес не указан</span>
+                                        <button class="destination__button" type="button">
+                                            <span class="destination__button-text">не выбрано</span>
+                                        </button>
+                                    </div>
+                                    <div class="delivery__comment">
+                                        <label class="delivery__comment-tittle" for="comment">Комментарий к
+                                            заказу</label>
+                                        <textarea rows="4" id="comment" class="delivery__comment-field"
+                                            placeholder="Укажите особенности въезда на территорию склада или подъезда к адресу"></textarea>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </li>
+                    </ol>
+                </form>
+                <div class="delivery__help">
+                    <div class="delivery__help-wrap">
+                        <span class="delivery__help-text">Для расчета стоимости необходимо ввести параметры груза,
+                            пункты
+                            отправки и прибытия.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="./bundle.js"></script>
+</body>
+
+</html>
