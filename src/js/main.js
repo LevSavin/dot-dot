@@ -65,12 +65,12 @@ $('.select').each(function () {
             selectItem.on('click', function () {
                 let chooseItem = $(this).data('value');
 
-                $('.new-select.on').val(chooseItem).attr('selected', 'selected');
-                selectHead.text($(this).find('span').text());
+                const selectText = selectHead.find('.select-tittle')
+                selectText.text($(this).find('span').text());
 
                 selectList.slideUp(duration);
                 selectHead.removeClass('on');
-                selectHead.css('color', '#000000');
+                selectText.css('color', '#000000');
             });
 
         } else {
