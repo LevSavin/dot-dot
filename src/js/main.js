@@ -22,8 +22,8 @@ $('.select').each(function () {
 
     _this.hide();
     _this.wrap('<div class="select"></div>');
-    let div = $('<div>', {
-        class: 'new-select',
+    let div = $('<span>', {
+        class: 'select-tittle',
         text: _this.children('option:selected').text(),
     })
     let isDisabled = _this.children('option:selected').prop("disabled");
@@ -31,6 +31,9 @@ $('.select').each(function () {
         div.css('color', '#CFCFCF');
     }
     div.insertAfter(_this);
+
+    const selectTittle = _this.next('.select-tittle');
+    selectTittle.wrap('<div class="new-select"></div>');
 
     const selectHead = _this.next('.new-select');
     $('<div>', {

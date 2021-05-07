@@ -83,7 +83,6 @@ body {
 	-webkit-align-items: center;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
-  position: relative;
   border: none;
   cursor: pointer;
   user-select: none;
@@ -94,7 +93,28 @@ body {
   background-color: $white-color;
   color: $black-color;
   overflow: hidden;
-  line-height: 3em;  
+  line-height: 3em; 
+  flex-flow: nowrap;
+  display: grid;
+  grid-template-columns: 1fr 20px;
+  position:relative;
+}
+
+.select-tittle {
+  width: 78%;
+  overflow: hidden; 
+  position:relative;
+  white-space:nowrap
+}
+
+.select-tittle:after{
+  content:'';
+  position: absolute;
+  right:0px;
+  width: 23px;
+  height:100%;
+  top:0;
+  background:linear-gradient(to right, rgba(240, 244, 245, 0), rgba(240, 244, 245, 1));
 }
 
 .new-select__list {
